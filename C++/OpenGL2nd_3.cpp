@@ -3,6 +3,7 @@
 
 
 void main(){
+	
 	std::mt19937 random(std::random_device{}());
 	const int max_play_count = 5;
 	int win = 0;

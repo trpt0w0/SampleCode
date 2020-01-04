@@ -13,10 +13,10 @@ void main(){
 
 		// 対戦回数を表示
 		printf("[%d戦目]手を選択してください(0=グー 1=チョキ 2=パー):", play_count + 1);
-		scanf(%d, &player_hand);
+		scanf("%d", &player_hand);
 
 		// 乱数を使ってCPUの手を選択
-		int cpu_hand = std::uniform_int_distribution<> rand(0, 2);
+		int cpu_hand = std::uniform_int_distribution<>(0, 2);
 		
 		// すべての勝敗の結果を表示し、勝敗回数を記録
 		if(player_hand == 2 && cpu_hand == 0){

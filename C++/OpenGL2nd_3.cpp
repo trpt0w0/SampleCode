@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <random>
 
+
 void main(){
 	std::mt19937 random(std::random_device{}());
 	const int max_play_count = 5;
@@ -16,7 +17,7 @@ void main(){
 		scanf("%d", &player_hand);
 
 		// —”‚ğg‚Á‚ÄCPU‚Ìè‚ğ‘I‘ğ
-		int cpu_hand = std::uniform_int_distribution<>(0, 2)(rand);
+		int cpu_hand = std::uniform_int_distribution<>(0, 2)(random);
 		
 		// ‚·‚×‚Ä‚ÌŸ”s‚ÌŒ‹‰Ê‚ğ•\¦‚µAŸ”s‰ñ”‚ğ‹L˜^
 		if(player_hand == cpu_hand)
@@ -32,6 +33,7 @@ void main(){
 
 
 	}
+
 	printf("Ÿ‚¿=%d •‰‚¯=%d ˆø‚«•ª‚¯=%d \n", win, lose, max_play_count - win- lose);
 	if(win > lose){
 		printf("‚ ‚È‚½‚ÌŸ‚¿‚Å‚·.\n");

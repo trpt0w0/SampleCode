@@ -25,7 +25,7 @@ void main(){
 	char str[200];
 	scanf("%s", &str);
 
-	for(int i = 1; i <= strlen(str); i++ ){
+	for(int i = 1; i <= strlen(str); ++i ){
 		
 		printf("%c", str[i - 1]);
 		if(i % 8 == 0) {
